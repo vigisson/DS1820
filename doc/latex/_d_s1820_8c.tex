@@ -1,0 +1,245 @@
+\hypertarget{_d_s1820_8c}{\section{D\-S1820.\-c File Reference}
+\label{_d_s1820_8c}\index{D\-S1820.\-c@{D\-S1820.\-c}}
+}
+
+
+This file provides functions to manage the following functionalities of the 1-\/\-Wire Digital Thermometer D\-S1820 by D\-A\-L\-L\-A\-S Semiconductor\-:  
+
+
+{\ttfamily \#include \char`\"{}D\-S1820.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}One\-Wire.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_d_s1820_8c_aa4d035e020a62aed1c9ecd9f805b1f94}{\#define {\bfseries S\-C\-R\-A\-T\-C\-H\-P\-A\-D\-\_\-\-R\-E\-A\-D}~0x\-B\-E}\label{_d_s1820_8c_aa4d035e020a62aed1c9ecd9f805b1f94}
+
+\item 
+\hypertarget{_d_s1820_8c_ae570ffabc850eab15bd43c0cfba093c2}{\#define {\bfseries S\-C\-R\-A\-T\-C\-H\-P\-A\-D\-\_\-\-S\-T\-O\-R\-E}~0x48}\label{_d_s1820_8c_ae570ffabc850eab15bd43c0cfba093c2}
+
+\item 
+\hypertarget{_d_s1820_8c_ab13f3e9c566536d86a3efc83b0ddc7ee}{\#define {\bfseries S\-C\-R\-A\-T\-C\-H\-P\-A\-D\-\_\-\-W\-R\-I\-T\-E}~0x4\-E}\label{_d_s1820_8c_ab13f3e9c566536d86a3efc83b0ddc7ee}
+
+\item 
+\hypertarget{_d_s1820_8c_a6ce0d875012f51ba31417e31ed69d020}{\#define {\bfseries S\-C\-R\-A\-T\-C\-H\-P\-A\-D\-\_\-\-R\-E\-C\-A\-L\-L}~0x\-B8}\label{_d_s1820_8c_a6ce0d875012f51ba31417e31ed69d020}
+
+\item 
+\hypertarget{_d_s1820_8c_a4cdcbd15baa4ae5eb211f482142af23f}{\#define {\bfseries P\-O\-W\-E\-R\-\_\-\-S\-U\-P\-P\-L\-Y\-\_\-\-R\-E\-A\-D}~0x\-B4}\label{_d_s1820_8c_a4cdcbd15baa4ae5eb211f482142af23f}
+
+\item 
+\hypertarget{_d_s1820_8c_a3c3ec46347886e5516c7a458b26ef5e5}{\#define {\bfseries S\-C\-R\-A\-T\-C\-H\-P\-A\-D\-\_\-\-L\-E\-N\-G\-T\-H}~9}\label{_d_s1820_8c_a3c3ec46347886e5516c7a458b26ef5e5}
+
+\item 
+\hypertarget{_d_s1820_8c_a07aeacc238991df28989e84f2318fb66}{\#define {\bfseries S\-C\-R\-A\-T\-C\-H\-P\-A\-D\-\_\-\-C\-R\-C\-\_\-\-P\-O\-S}~(S\-C\-R\-A\-T\-C\-H\-P\-A\-D\-\_\-\-L\-E\-N\-G\-T\-H -\/ 1)}\label{_d_s1820_8c_a07aeacc238991df28989e84f2318fb66}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_d_s1820_8c_a67198b0df23568f1f9535a9cbabf563b}{D\-S1820\-\_\-\-Init} (void)
+\item 
+D\-S1820\-\_\-\-State \hyperlink{_d_s1820_8c_ac21a010c10d87d2a77f900ded1104c48}{D\-S1820\-\_\-\-Temperature\-Convert} (uint64\-\_\-t i\-Address)
+\item 
+int \hyperlink{_d_s1820_8c_a8ebafcbef23a6c67a8fb6cf94af9785b}{D\-S1820\-\_\-\-Temperature\-Get} (uint64\-\_\-t i\-Address)
+\item 
+D\-S1820\-\_\-\-State \hyperlink{_d_s1820_8c_acfe03c7cbfa625a359122879559e3cf2}{D\-S1820\-\_\-\-Temperature\-Alarm\-Set} (uint64\-\_\-t i\-Address, int i\-High, int i\-Low)
+\item 
+D\-S1820\-\_\-\-State \hyperlink{_d_s1820_8c_a455c5612eae74f3dbcc21df4efaa40d3}{D\-S1820\-\_\-\-Temperature\-Alarm\-Get} (uint64\-\_\-t i\-Address, int $\ast$i\-High, int $\ast$i\-Low)
+\item 
+D\-S1820\-\_\-\-State \hyperlink{_d_s1820_8c_a1418d7e75c78479f68a51b69a8176f58}{D\-S1820\-\_\-\-Configuration\-Store} (uint64\-\_\-t i\-Address)
+\item 
+D\-S1820\-\_\-\-State \hyperlink{_d_s1820_8c_a3cdda2c543c12c064aa9d527ec1d971c}{D\-S1820\-\_\-\-Configuration\-Recall} (uint64\-\_\-t i\-Address)
+\item 
+D\-S1820\-\_\-\-State \hyperlink{_d_s1820_8c_a2c71310c2d3344f5b8d238d111901040}{D\-S1820\-\_\-\-Power\-Type\-Get} (uint64\-\_\-t i\-Address)
+\item 
+int \hyperlink{_d_s1820_8c_a3edf0542ec324363b5071e9e7392fcd6}{D\-S1820\-\_\-\-Search} (uint64\-\_\-t $\ast$Addresses, int i\-Max\-Devices)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file provides functions to manage the following functionalities of the 1-\/\-Wire Digital Thermometer D\-S1820 by D\-A\-L\-L\-A\-S Semiconductor\-: \begin{DoxyAuthor}{Author}
+Vojtech Vigner 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\-0.\-1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12-\/\-February-\/2013
+\begin{DoxyItemize}
+\item Initialization and Configuration
+\item Temperature Measurements
+\item Device Power Informations
+\item Temperature Threshold Configuration
+\end{DoxyItemize}
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+Requires working One\-Wire library. Please notice Strong or Weak Pull Up states warnings for each function, this only applies for parasite power configuration.
+\end{DoxyAttention}
+\begin{DoxyVerb}*          ********************************************************************
+*                                How to use this library
+*          ********************************************************************
+*          1. Initialize using DS1820_Init().
+* 
+*          2. Use DS1820_Search to discover DS1820 sensors on the bus
+*
+*          3. Now you can use DS1820_TemperatureConvert to start temperature 
+*          measurements on selected device.
+* 
+*          4. Wait at least 500 ms to complete temperature conversion.
+*              
+*          5. Read temperature by DS1820_TemperatureGet function.          
+*  \end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\hypertarget{_d_s1820_8c_a3cdda2c543c12c064aa9d527ec1d971c}{\index{D\-S1820.\-c@{D\-S1820.\-c}!D\-S1820\-\_\-\-Configuration\-Recall@{D\-S1820\-\_\-\-Configuration\-Recall}}
+\index{D\-S1820\-\_\-\-Configuration\-Recall@{D\-S1820\-\_\-\-Configuration\-Recall}!DS1820.c@{D\-S1820.\-c}}
+\subsubsection[{D\-S1820\-\_\-\-Configuration\-Recall}]{\setlength{\rightskip}{0pt plus 5cm}D\-S1820\-\_\-\-State D\-S1820\-\_\-\-Configuration\-Recall (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{i\-Address}
+\end{DoxyParamCaption}
+)}}\label{_d_s1820_8c_a3cdda2c543c12c064aa9d527ec1d971c}
+Loads device configuration from internal E\-E\-P\-R\-O\-M. 
+\begin{DoxyParams}{Parameters}
+{\em i\-Address} & 64bit device address, use D\-S1820\-\_\-\-A\-D\-D\-R\-E\-S\-S\-\_\-\-A\-L\-L for all devices. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\-S1820\-\_\-\-O\-K if successfull, D\-S1820\-\_\-\-E\-R\-R\-O\-R if failed. 
+\end{DoxyReturn}
+\hypertarget{_d_s1820_8c_a1418d7e75c78479f68a51b69a8176f58}{\index{D\-S1820.\-c@{D\-S1820.\-c}!D\-S1820\-\_\-\-Configuration\-Store@{D\-S1820\-\_\-\-Configuration\-Store}}
+\index{D\-S1820\-\_\-\-Configuration\-Store@{D\-S1820\-\_\-\-Configuration\-Store}!DS1820.c@{D\-S1820.\-c}}
+\subsubsection[{D\-S1820\-\_\-\-Configuration\-Store}]{\setlength{\rightskip}{0pt plus 5cm}D\-S1820\-\_\-\-State D\-S1820\-\_\-\-Configuration\-Store (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{i\-Address}
+\end{DoxyParamCaption}
+)}}\label{_d_s1820_8c_a1418d7e75c78479f68a51b69a8176f58}
+Saves device volatile configuration into internal E\-E\-P\-R\-O\-M. \begin{DoxyWarning}{Warning}
+This function sets communication pin in Strong\-Pull\-Up state. 
+
+The bus has to be in Strong\-Pull\-Up state at least for 10 ms. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em i\-Address} & 64bit device address, use D\-S1820\-\_\-\-A\-D\-D\-R\-E\-S\-S\-\_\-\-A\-L\-L for all devices. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\-S1820\-\_\-\-O\-K if successfull, D\-S1820\-\_\-\-E\-R\-R\-O\-R if failed. 
+\end{DoxyReturn}
+\hypertarget{_d_s1820_8c_a67198b0df23568f1f9535a9cbabf563b}{\index{D\-S1820.\-c@{D\-S1820.\-c}!D\-S1820\-\_\-\-Init@{D\-S1820\-\_\-\-Init}}
+\index{D\-S1820\-\_\-\-Init@{D\-S1820\-\_\-\-Init}!DS1820.c@{D\-S1820.\-c}}
+\subsubsection[{D\-S1820\-\_\-\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1820\-\_\-\-Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_d_s1820_8c_a67198b0df23568f1f9535a9cbabf563b}
+Initalizes and resets One\-Wire communication. \hypertarget{_d_s1820_8c_a2c71310c2d3344f5b8d238d111901040}{\index{D\-S1820.\-c@{D\-S1820.\-c}!D\-S1820\-\_\-\-Power\-Type\-Get@{D\-S1820\-\_\-\-Power\-Type\-Get}}
+\index{D\-S1820\-\_\-\-Power\-Type\-Get@{D\-S1820\-\_\-\-Power\-Type\-Get}!DS1820.c@{D\-S1820.\-c}}
+\subsubsection[{D\-S1820\-\_\-\-Power\-Type\-Get}]{\setlength{\rightskip}{0pt plus 5cm}D\-S1820\-\_\-\-State D\-S1820\-\_\-\-Power\-Type\-Get (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{i\-Address}
+\end{DoxyParamCaption}
+)}}\label{_d_s1820_8c_a2c71310c2d3344f5b8d238d111901040}
+
+\begin{DoxyParams}{Parameters}
+{\em i\-Address} & 64bit device address, use D\-S1820\-\_\-\-A\-D\-D\-R\-E\-S\-S\-\_\-\-A\-L\-L for all devices. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\-S1820\-\_\-\-P\-A\-R\-A\-S\-I\-T\-E\-\_\-\-P\-O\-W\-E\-R (if at least one device is parasite powered) or D\-S1820\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-P\-O\-W\-E\-R if successfull, D\-S1820\-\_\-\-E\-R\-R\-O\-R if failed. 
+\end{DoxyReturn}
+\hypertarget{_d_s1820_8c_a3edf0542ec324363b5071e9e7392fcd6}{\index{D\-S1820.\-c@{D\-S1820.\-c}!D\-S1820\-\_\-\-Search@{D\-S1820\-\_\-\-Search}}
+\index{D\-S1820\-\_\-\-Search@{D\-S1820\-\_\-\-Search}!DS1820.c@{D\-S1820.\-c}}
+\subsubsection[{D\-S1820\-\_\-\-Search}]{\setlength{\rightskip}{0pt plus 5cm}int D\-S1820\-\_\-\-Search (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t $\ast$}]{Addresses, }
+\item[{int}]{i\-Max\-Devices}
+\end{DoxyParamCaption}
+)}}\label{_d_s1820_8c_a3edf0542ec324363b5071e9e7392fcd6}
+Function searches for D\-S1820 devices on the bus and stores them in to array. 
+\begin{DoxyParams}{Parameters}
+{\em Addresses} & Pointer to array for device addresses to be stored. \\
+\hline
+{\em i\-Max\-Devices} & Maximum of devices to be searched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of devices found. 
+\end{DoxyReturn}
+\hypertarget{_d_s1820_8c_a455c5612eae74f3dbcc21df4efaa40d3}{\index{D\-S1820.\-c@{D\-S1820.\-c}!D\-S1820\-\_\-\-Temperature\-Alarm\-Get@{D\-S1820\-\_\-\-Temperature\-Alarm\-Get}}
+\index{D\-S1820\-\_\-\-Temperature\-Alarm\-Get@{D\-S1820\-\_\-\-Temperature\-Alarm\-Get}!DS1820.c@{D\-S1820.\-c}}
+\subsubsection[{D\-S1820\-\_\-\-Temperature\-Alarm\-Get}]{\setlength{\rightskip}{0pt plus 5cm}D\-S1820\-\_\-\-State D\-S1820\-\_\-\-Temperature\-Alarm\-Get (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{i\-Address, }
+\item[{int $\ast$}]{i\-High, }
+\item[{int $\ast$}]{i\-Low}
+\end{DoxyParamCaption}
+)}}\label{_d_s1820_8c_a455c5612eae74f3dbcc21df4efaa40d3}
+Function receives temperature alarm for high an low thresholds. 
+\begin{DoxyParams}{Parameters}
+{\em i\-Address} & 64bit device address, use D\-S1820\-\_\-\-A\-D\-D\-R\-E\-S\-S\-\_\-\-A\-L\-L to skip address match (only for single device on the bus). \\
+\hline
+{\em i\-High} & High temperature threshold, in degrees of Celsius. \\
+\hline
+{\em i\-Low} & Low temperature threshold, in degrees of Celsius. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\-S1820\-\_\-\-O\-K if successfull, D\-S1820\-\_\-\-E\-R\-R\-O\-R if failed. 
+\end{DoxyReturn}
+\hypertarget{_d_s1820_8c_acfe03c7cbfa625a359122879559e3cf2}{\index{D\-S1820.\-c@{D\-S1820.\-c}!D\-S1820\-\_\-\-Temperature\-Alarm\-Set@{D\-S1820\-\_\-\-Temperature\-Alarm\-Set}}
+\index{D\-S1820\-\_\-\-Temperature\-Alarm\-Set@{D\-S1820\-\_\-\-Temperature\-Alarm\-Set}!DS1820.c@{D\-S1820.\-c}}
+\subsubsection[{D\-S1820\-\_\-\-Temperature\-Alarm\-Set}]{\setlength{\rightskip}{0pt plus 5cm}D\-S1820\-\_\-\-State D\-S1820\-\_\-\-Temperature\-Alarm\-Set (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{i\-Address, }
+\item[{int}]{i\-High, }
+\item[{int}]{i\-Low}
+\end{DoxyParamCaption}
+)}}\label{_d_s1820_8c_acfe03c7cbfa625a359122879559e3cf2}
+Function sets temperature alarm for high an low thresholds. 
+\begin{DoxyParams}{Parameters}
+{\em i\-Address} & 64bit device address, use D\-S1820\-\_\-\-A\-D\-D\-R\-E\-S\-S\-\_\-\-A\-L\-L to skip address match (only for single device on the bus). \\
+\hline
+{\em i\-High} & High temperature threshold, in degrees of Celsius. \\
+\hline
+{\em i\-Low} & Low temperature threshold, in degrees of Celsius. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\-S1820\-\_\-\-O\-K if successfull, D\-S1820\-\_\-\-E\-R\-R\-O\-R if failed. 
+\end{DoxyReturn}
+\hypertarget{_d_s1820_8c_ac21a010c10d87d2a77f900ded1104c48}{\index{D\-S1820.\-c@{D\-S1820.\-c}!D\-S1820\-\_\-\-Temperature\-Convert@{D\-S1820\-\_\-\-Temperature\-Convert}}
+\index{D\-S1820\-\_\-\-Temperature\-Convert@{D\-S1820\-\_\-\-Temperature\-Convert}!DS1820.c@{D\-S1820.\-c}}
+\subsubsection[{D\-S1820\-\_\-\-Temperature\-Convert}]{\setlength{\rightskip}{0pt plus 5cm}D\-S1820\-\_\-\-State D\-S1820\-\_\-\-Temperature\-Convert (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{i\-Address}
+\end{DoxyParamCaption}
+)}}\label{_d_s1820_8c_ac21a010c10d87d2a77f900ded1104c48}
+Initializes temperature measurement on D\-S1820 chip. \begin{DoxyWarning}{Warning}
+This function sets communication pin in Strong\-Pull\-Up state. 
+
+The bus has to be in Strong\-Pull\-Up state at least for 500 ms. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em i\-Address} & 64bit device address, use D\-S1820\-\_\-\-A\-D\-D\-R\-E\-S\-S\-\_\-\-A\-L\-L for all devices. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\-S1820\-\_\-\-O\-K if successfull, D\-S1820\-\_\-\-E\-R\-R\-O\-R if failed. 
+\end{DoxyReturn}
+\hypertarget{_d_s1820_8c_a8ebafcbef23a6c67a8fb6cf94af9785b}{\index{D\-S1820.\-c@{D\-S1820.\-c}!D\-S1820\-\_\-\-Temperature\-Get@{D\-S1820\-\_\-\-Temperature\-Get}}
+\index{D\-S1820\-\_\-\-Temperature\-Get@{D\-S1820\-\_\-\-Temperature\-Get}!DS1820.c@{D\-S1820.\-c}}
+\subsubsection[{D\-S1820\-\_\-\-Temperature\-Get}]{\setlength{\rightskip}{0pt plus 5cm}int D\-S1820\-\_\-\-Temperature\-Get (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{i\-Address}
+\end{DoxyParamCaption}
+)}}\label{_d_s1820_8c_a8ebafcbef23a6c67a8fb6cf94af9785b}
+Reads tepmerature from specific device. You have to use Temperature\-Convert function before calling Temperature\-Get. 
+\begin{DoxyParams}{Parameters}
+{\em i\-Address} & 64bit device address, use D\-S1820\-\_\-\-A\-D\-D\-R\-E\-S\-S\-\_\-\-A\-L\-L to skip address match (only for single device on the bus). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Temperature in degrees of Celsius $\ast$ 10 or D\-S1820\-\_\-\-T\-E\-M\-P\-\_\-\-E\-R\-R\-O\-R in case of an error. 
+\end{DoxyReturn}
